@@ -29,15 +29,15 @@ fun main(){
 fun countOccurences(number: Int, target: Int): Int{
     var worker: String = number.toString()
     var occurences = 0
-    var iterations = 1
+    var iterations = worker.length
     while(true){
-        if(worker.length>iterations) break;
-        if(worker[worker.length-iterations] == target.toChar()){
+        if(iterations==0) break;
+        if(worker[worker.length-iterations].toInt() == target){
             occurences++
             continue
         }
-        println("${worker[worker.length-iterations]} and ${target.toChar()}")
-        iterations++
+        println("${worker[worker.length-iterations]} and ${target}")
+        iterations--
     }
     return occurences
 }
