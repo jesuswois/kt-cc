@@ -32,12 +32,11 @@ fun countOccurences(number: Int, target: Int): Int{
     var iterations = worker.length
     while(true){
         if(iterations==0) break;
-        if(worker[worker.length-iterations].toInt() == target){
+        if(worker[worker.length-iterations--] == target.digitToChar()){
             occurences++
             continue
         }
-        println("${worker[worker.length-iterations]} and ${target}")
-        iterations--
+        
     }
     return occurences
 }

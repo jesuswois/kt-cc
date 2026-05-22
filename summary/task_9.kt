@@ -10,3 +10,10 @@
 //  #########
 // ###########
 
+fun main(){
+    showTriangle(3)
+}
+
+fun showTriangle(size: Int): String{
+
+}
