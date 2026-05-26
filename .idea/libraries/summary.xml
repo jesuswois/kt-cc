@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="summary">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/summary/task_4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/summary/task_5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

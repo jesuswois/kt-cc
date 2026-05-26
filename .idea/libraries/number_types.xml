@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="number_types">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/number_types/expression_guess.jar!/" />
+      <root url="jar://$PROJECT_DIR$/number_types/values_check.jar!/" />
+      <root url="jar://$PROJECT_DIR$/number_types/temperature_converter.jar!/" />
+      <root url="jar://$PROJECT_DIR$/number_types/milliseconds_converter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

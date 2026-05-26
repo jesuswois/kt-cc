@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="in_keyword">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/in_keyword/task_4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/in_keyword/task_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/in_keyword/task_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/in_keyword/task_3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

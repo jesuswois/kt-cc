@@ -10,3 +10,14 @@
 
 // For proper alignment, use `"%3d".format(number)` to place any necessary spaces
 // before the number.
+
+println(("%3d").format())
+main()
+
+fun main(){
+    showSnake(3,3)
+}
+
+fun showSnake(rows: Int, columns: Int){
+
+}

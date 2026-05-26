@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="repetition_while">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/repetition_while/task_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/repetition_while/task_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/repetition_while/task_1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="looping_&amp;_ranges">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/looping_&amp;_ranges/task_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/looping_&amp;_ranges/task_4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/looping_&amp;_ranges/task_2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/looping_&amp;_ranges/task_3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

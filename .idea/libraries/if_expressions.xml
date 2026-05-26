@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="if_expressions">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/if_expressions/absoluteValue.jar!/" />
+      <root url="jar://$PROJECT_DIR$/if_expressions/checkSign.jar!/" />
+      <root url="jar://$PROJECT_DIR$/if_expressions/findMax.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
