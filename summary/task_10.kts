@@ -11,13 +11,39 @@
 // For proper alignment, use `"%3d".format(number)` to place any necessary spaces
 // before the number.
 
-println(("%3d").format())
 main()
 
-fun main(){
-    showSnake(3,3)
+fun showSnake(rows: Int, columns: Int) {
+  val width = (rows * columns) - 1;
+  var reversed: Boolean = false;
+  var currentNumber = 0;
+  for(row in 1..rows){
+    if(!reversed) {
+      for(column in currentNumber..columns-1) {
+        print(("%${width}d").format(column));
+      }
+    } else {
+      for(column in currentNumber+columns downTo currentNumber){
+        print(("%${width}d").format(column));
+        currentNumber++
+        }
+    }
+    println("")
+    reversed = !reversed
+  }
 }
 
-fun showSnake(rows: Int, columns: Int){
-
+fun main() {
+  showSnake(2, 3)
+  println("")
+  showSnake(4, 5)
 }
+/* Output:
+ 0 1 2
+ 5 4 3
+
+  0  1  2  3  4
+  9  8  7  6  5
+ 10 11 12 13 14
+ 19 18 17 16 15
+*/
