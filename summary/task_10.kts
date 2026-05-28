@@ -18,24 +18,24 @@ fun showSnake(rows: Int, columns: Int) {
   var reversed: Boolean = false;
   var currentNumber = 0;
   for(row in 1..rows){
-    if(!reversed) {
-      for(column in currentNumber..columns-1) {
-        print(("%${width}d").format(column));
+      var rowLine = "";
+      startingNumber = currentNumber;
+      for(column in startingNumber..startingNumber+columns) {
+          if(!reversed){
+              rowLine = rowLine + ("%${width}d").format(column);
+          } else {
+              rowLine = ("%${width}d").format(column) + rowLine;
+          }
+          currentNumber++;
       }
-    } else {
-      for(column in currentNumber+columns downTo currentNumber){
-        print(("%${width}d").format(column));
-        currentNumber++
-        }
-    }
-    println("")
-    reversed = !reversed
+      print(rowLine);
+      println("");
+      reversed = !reversed;
   }
 }
 
 fun main() {
   showSnake(2, 3)
-  println("")
   showSnake(4, 5)
 }
 /* Output:
