@@ -11,16 +11,19 @@
 // For proper alignment, use `"%3d".format(number)` to place any necessary spaces
 // before the number.
 
+// this def can be optimized
+
 main()
 
 fun showSnake(rows: Int, columns: Int) {
-  val width = (rows * columns) - 1;
+  val width = ((rows * columns) - 1).toString().length + 1;
+
   var reversed: Boolean = false;
   var currentNumber = 0;
   for(row in 1..rows){
       var rowLine = "";
-      startingNumber = currentNumber;
-      for(column in startingNumber..startingNumber+columns) {
+      var startingNumber = currentNumber;
+      for(column in startingNumber..startingNumber+columns-1) {
           if(!reversed){
               rowLine = rowLine + ("%${width}d").format(column);
           } else {
@@ -32,6 +35,7 @@ fun showSnake(rows: Int, columns: Int) {
       println("");
       reversed = !reversed;
   }
+    println("")
 }
 
 fun main() {
