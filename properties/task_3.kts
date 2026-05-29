@@ -14,7 +14,7 @@
 //
 //HINT: Write an auxiliary ("helper") member function named `crossBoundary()` to
 //        check the boundaries. This eliminates repetition and simplifies the resulting
-//code.
+//code.as
 
 
 main()
@@ -35,11 +35,10 @@ class Robot{
     fun getLocation(): String{
         return "($x, $y)";
     }
-    fun crossBoundaries(x_value: Int, y_value: Int){
+    fun crossBoundaries(x_value: Int = 0, y_value: Int = 0){
         if(x_value>100 || x_value<0){
             // Excede el valor
-            if(x_value<0) x_value*=-1
-            x = x_value%100
+
         }
 
         if(y_value>100){
