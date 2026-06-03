@@ -21,11 +21,9 @@ main()
 
 fun main(){
     val robotInstance = Robot()
-    robotInstance.right(5)
-    robotInstance.up(5)
+    robotInstance.down(1)
     println(robotInstance.getLocation())
-    robotInstance.left(6)
-    robotInstance.down(5)
+    robotInstance.left(10)
     println(robotInstance.getLocation())
 }
 
@@ -36,29 +34,34 @@ class Robot{
         return "($x, $y)";
     }
     fun crossBoundaries(x_value: Int = 0, y_value: Int = 0){
-        if(x_value>100 || x_value<0){
-            // Excede el valor
-
+        if(x+x_value<0){
+            x = (x+x_value)%(100*(x+x_value/100))*-1
+        } else{
+            x = (x+x_value)%100
         }
-
-        if(y_value>100){
-            y = y_value%100
+        if(y+y_value<0) {
+            // Occurrences saves the division of the value of the sum of y and y_value, between 100. Basically telling us
+            // how many times does 100 appear.
+            val occurrences = 1
+            y = (y+y_value)%(100*(y+y_value/100))*-1
+        } else {
+            y = (y+y_value)% 100
         }
     }
     fun up(steps: Int){
         // Moving down increases the 'y' value.
-        y += steps;
+        crossBoundaries(0,steps);
     }
     fun down(steps: Int){
         // Moving down decreases the 'y' value.
-        y -= steps;
+        crossBoundaries(0, -steps)
     }
     fun right(steps: Int){
         // Moving to the right increases the 'x' value.
-        x += steps;
+        crossBoundaries(steps,0)
     }
     fun left(steps: Int){
         // Moving to the left increases the 'x' value.
-        x -= steps;
+        crossBoundaries(-x,steps)
     }
 }
