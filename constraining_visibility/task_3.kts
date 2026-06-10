@@ -1,27 +1,14 @@
-//----------------------------------Exercise 2----------------------------------
-//
-//Continue developing the `Robot` class from the exercises in the previous atom.
-//Convert the properties storing the size of the field and the current
-//        coordinates into `Robot` constructor parameters.
-//}
-
 //----------------------------------Exercise 3----------------------------------
 //
-//A `Robot` can move within a square field of size `100 x 100`. The borders of
-//this field are "looped": if the robot is in cell `(0, 0)` and moves up one
-//        step, it arrives in cell `(0, 99)`.
+//A `Robot` can only move forward. Check that the `steps` argument is a positive
+//number. For `right()`, `left()`, `down()` and `up()`, a negative or zero
+//        `steps` argument should not update the location. Instead it should produce
+//        console output using this `String`:
 //
-//(0, 0)
-//// up(1)
-//(0, 99)
-//// left(10)
-//(90, 99)
+//"steps argument must be positive, is $steps"
 //
-//Modify `right()`, `left()`, `up()` and `down()` to implement this behavior.
-//
-//HINT: Write an auxiliary ("helper") member function named `crossBoundary()` to
-//        check the boundaries. This eliminates repetition and simplifies the resulting
-//code.as
+//In `main()`, test your code using positive, negative and zero values of
+//`steps`.
 
 
 main()
@@ -32,15 +19,18 @@ fun main(){
     println(robotInstance.getLocation())
     robotInstance.left(10)
     println(robotInstance.getLocation())
+    println(robotInstance)
 }
 
-class Robot(x: Int = 0,y: Int = 0,val field_size: Int = 100){
-    var x = 0;
-    var y = 0;
+class Robot(x: Int,y: Int, field_size: Int){
+    private var x = 0;
+    private var y = 0;
+    private val field_size = 100
+    override fun toString(): String = "Robot(x=$x, y=$y)"
     fun getLocation(): String{
         return "($x, $y)";
     }
-    fun crossBoundaries(x_value: Int = 0, y_value: Int = 0){
+    private fun crossBoundaries(x_value: Int = 0, y_value: Int = 0){
         if(x+x_value<0){
             x = (x+x_value)+(field_size*(x+1+(x_value/field_size)))
         } else{

@@ -7,7 +7,7 @@
 
 main()
 
-class main(){
+fun main(){
     val floatNumber = Floating(1.0)
     println(floatNumber)
 }

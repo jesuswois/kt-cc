@@ -1,28 +1,8 @@
 //----------------------------------Exercise 2----------------------------------
 //
-//Continue developing the `Robot` class from the exercises in the previous atom.
-//Convert the properties storing the size of the field and the current
-//        coordinates into `Robot` constructor parameters.
-//}
-
-//----------------------------------Exercise 3----------------------------------
-//
-//A `Robot` can move within a square field of size `100 x 100`. The borders of
-//this field are "looped": if the robot is in cell `(0, 0)` and moves up one
-//        step, it arrives in cell `(0, 99)`.
-//
-//(0, 0)
-//// up(1)
-//(0, 99)
-//// left(10)
-//(90, 99)
-//
-//Modify `right()`, `left()`, `up()` and `down()` to implement this behavior.
-//
-//HINT: Write an auxiliary ("helper") member function named `crossBoundary()` to
-//        check the boundaries. This eliminates repetition and simplifies the resulting
-//code.as
-
+//Continue developing the `Robot` class from the exercises in the previous atoms.
+//Use `private` on all the properties and `crossBoundary()`, and verify that you
+//        can't access the private members outside of the class.
 
 main()
 
@@ -32,15 +12,17 @@ fun main(){
     println(robotInstance.getLocation())
     robotInstance.left(10)
     println(robotInstance.getLocation())
+    println(robotInstance)
 }
 
-class Robot(x: Int = 0,y: Int = 0,val field_size: Int = 100){
-    var x = 0;
-    var y = 0;
+class Robot(x: Int = 0,y: Int = 0,private val field_size: Int = 100){
+    private var x = 0;
+    private var y = 0;
+    override fun toString(): String = "Robot(x=$x, y=$y)"
     fun getLocation(): String{
         return "($x, $y)";
     }
-    fun crossBoundaries(x_value: Int = 0, y_value: Int = 0){
+    private fun crossBoundaries(x_value: Int = 0, y_value: Int = 0){
         if(x+x_value<0){
             x = (x+x_value)+(field_size*(x+1+(x_value/field_size)))
         } else{
