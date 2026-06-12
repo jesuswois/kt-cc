@@ -22,7 +22,7 @@ fun main(){
     println(robotInstance)
 }
 
-class Robot(x: Int,y: Int, field_size: Int){
+class Robot(x: Int = 0,y: Int = 0, field_size: Int = 0){
     private var x = 0;
     private var y = 0;
     private val field_size = 100
@@ -42,20 +42,28 @@ class Robot(x: Int,y: Int, field_size: Int){
             y = (y+y_value)% field_size
         }
     }
-    fun up(steps: Int){
+    fun up(steps: Int): String{
+        if(steps<0) return "steps argument must be positive, is $steps"
         // Moving down increases the 'y' value.
         crossBoundaries(0,-steps);
+        return ""
     }
-    fun down(steps: Int){
+    fun down(steps: Int): String{
+        if(steps<0) return "steps argument must be positive, is $steps"
         // Moving down decreases the 'y' value.
         crossBoundaries(0, steps)
+        return ""
     }
-    fun right(steps: Int){
+    fun right(steps: Int): String{
+        if(steps<0) return "steps argument must be positive, is $steps"
         // Moving to the right increases the 'x' value.
         crossBoundaries(steps,0)
+        return ""
     }
-    fun left(steps: Int){
+    fun left(steps: Int): String{
+        if(steps<0) return "steps argument must be positive, is $steps"
         // Moving to the left increases the 'x' value.
         crossBoundaries(-steps,0)
+        return ""
     }
 }
