@@ -9,7 +9,19 @@
 //the words are anagrams. For example, for two anagrams "terrain" and "trainer"
 //the sorted character `List` will be `[a, e, i, n, r, r, t]`.
 
+main()
+
+fun main(){
+    println(anagramCheck("Ana","Naa"))
+}
+
 fun anagramCheck(firstString: String, secondString: String): Boolean{
-    val firstStringList = listOf<Char>()
-    val secondStringList = listOf<Char>()
+    val firstStringList = firstString.lowercase().toList()
+    val secondStringList = secondString.lowercase().toList()
+
+    println("First string: ${firstStringList.sorted()}")
+    println("Second string: ${secondStringList.sorted()}")
+    if(firstStringList.sorted() == secondStringList.sorted()) return true
+
+    return false
 }
