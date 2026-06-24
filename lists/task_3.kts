@@ -8,3 +8,8 @@
 //Convert a `String` to a `List` by calling `toList()`. If the `Lists` are equal,
 //the words are anagrams. For example, for two anagrams "terrain" and "trainer"
 //the sorted character `List` will be `[a, e, i, n, r, r, t]`.
+
+fun anagramCheck(firstString: String, secondString: String): Boolean{
+    val firstStringList = listOf<Char>()
+    val secondStringList = listOf<Char>()
+}
