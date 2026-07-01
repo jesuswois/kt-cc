@@ -12,3 +12,13 @@
 //HINT: Use `toList()` on the `vararg` parameter to get the requested `String`
 //representation.
 //
+
+main()
+
+fun main(){
+    printArgs("Numbers: ", 1, 2, 3)
+}
+
+fun printArgs(message: String, vararg numbers: Int){
+    println("$message${numbers.toList()}")
+}
