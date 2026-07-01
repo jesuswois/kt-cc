@@ -7,3 +7,16 @@
 //
 //HINT: Use the standard library function `chunked()` on `List`.
 //
+
+main()
+
+fun main(){
+    val list1 = mutableListOf<String>("one", "two", "three", "four")
+    println(list1)
+    println(list1.chunked(1))
+    println(listOfChunks(3,"what","hi","bye","yellow","leopard","zed","50","cloud","rather","brother"))
+}
+
+fun listOfChunks(size: Int, vararg strings: String): List<List<String>>{
+    return strings.toList().chunked(size)
+}
