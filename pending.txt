@@ -1,3 +1,0 @@
--
--
-- why does double.MAX_VALUE == double.MAX_VALUE + 1
